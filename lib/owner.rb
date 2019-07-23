@@ -8,7 +8,7 @@ class Owner
   # Instance Methods #
 
   def initialize(name)
-    @species = human
+    @species = "human"
     @@all << self
     @pets = {:fishes => [], :dogs => [], :cats => []}
   end
