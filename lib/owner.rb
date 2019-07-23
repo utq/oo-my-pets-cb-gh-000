@@ -2,16 +2,23 @@ require 'pry'
 
 class Owner
   @@all= []
-  attr_accessor :name, :pets
-  attr_reader :species
+  attr_accessor  :pets
+  attr_reader :species,:name
 
   # Instance Methods #
 
-  def initialize(species)
-    @species = species
+  def initialize(name)
+    @species = human
     @@all << self
     @pets = {:fishes => [], :dogs => [], :cats => []}
   end
+
+  def name
+    @name
+  end
+
+  def species
+
 
   def say_species
     return "I am a #{@species}."
