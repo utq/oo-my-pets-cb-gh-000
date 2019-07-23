@@ -56,8 +56,8 @@ class Owner
   end
 
   def list_pets
-    num_dogs = @cats.size
-    num_cats = @dogs.size
+    num_dogs = @dogs.size
+    num_cats = @cats.size
     return "I have #{num_dogs} dog(s), and #{num_cats} cat(s)."
   end
 
