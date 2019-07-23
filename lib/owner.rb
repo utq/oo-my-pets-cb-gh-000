@@ -2,8 +2,6 @@ require 'pry'
 
 class Owner
   @@all= []
-  @cats = []
-  @dogs = []
 
   attr_accessor  :cats, :dogs
   attr_reader :species,:name
@@ -14,6 +12,8 @@ class Owner
     @species = "human"
     @name = name
     @@all << self
+    @@cats = []
+    @@dogs = []
     @pets = {:fishes => [], :dogs => [], :cats => []}
   end
 
