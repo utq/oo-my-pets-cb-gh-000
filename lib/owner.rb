@@ -25,12 +25,11 @@ class Owner
   end
 
   def buy_cat(name_of_cat)
-    @cats << Cat.new(name_of_cat, self)
-    puts @cats
+    Cat.new(name_of_cat, self)
   end
 
   def buy_dog(name_of_dog)
-    @dogs << Dog.new(name_of_dog, self)
+    Dog.new(name_of_dog, self)
   end
 
   def walk_dogs
