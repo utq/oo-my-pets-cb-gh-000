@@ -11,7 +11,7 @@ class Cat
     @@all << self
   end
 
-  def all
+  def self.all
     @@all
   end
 end
