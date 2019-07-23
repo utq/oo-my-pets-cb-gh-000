@@ -12,8 +12,8 @@ class Owner
     @species = "human"
     @name = name
     @@all << self
-    @@cats = []
-    @@dogs = []
+    @cats = []
+    @dogs = []
     @pets = {:fishes => [], :dogs => [], :cats => []}
   end
 
