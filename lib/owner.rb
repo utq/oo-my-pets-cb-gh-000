@@ -14,7 +14,6 @@ class Owner
     @@all << self
     @cats = []
     @dogs = []
-    @pets = {:fishes => [], :dogs => [], :cats => []}
   end
 
   def name
@@ -25,56 +24,30 @@ class Owner
     return "I am a #{@species}."
   end
 
-  # Pets #
-
-  def buy_fish(name_of_fish)
-    @pets[:fishes] << Fish.new(name_of_fish)
+  def buy_cat(name_of_cat)
+    @cats << Cat.new(name_of_cat)
   end
 
   def buy_dog(name_of_dog)
-    @pets[:dogs] << Dog.new(name_of_dog)
-  end
-
-  def buy_cat(name_of_cat)
-    @pets[:cats] << Cat.new(name_of_cat)
+    @dogs << Dog.new(name_of_dog)
   end
 
   def walk_dogs
-    @pets.collect do |species, instances|
-      if species == :dogs
-        instances.each do |dog|
-          dog.mood = "happy"
-        end
-      end
+    @dogs.each do |instance|
+          instance.mood = "happy"
     end
   end
 
-  def play_with_cats
-    @pets.collect do |species, instances|
-      if species == :cats
-        instances.each do |cat|
-          cat.mood = "happy"
-        end
-      end
-    end
-  end
-
-  def feed_fish
-    @pets.collect do |species, instances|
-      if species == :fishes
-        instances.each do |fish|
-          fish.mood = "happy"
-        end
-      end
+  def feed_cats
+    @cats.each do |instance|
+          instance.mood = "happy"
     end
   end
 
   def sell_pets
-    @pets.collect do |species, instances|
-      instances.each do |pet|
-        pet.mood = "nervous"
-      end
-      instances.clear
+    @cats.each do |instance|
+          instance.mood = "nervous"
+          instance.clear
     end
   end
 
