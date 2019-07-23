@@ -26,6 +26,7 @@ class Owner
 
   def buy_cat(name_of_cat)
     @cats << Cat.new(name_of_cat, self)
+    puts @cats
   end
 
   def buy_dog(name_of_dog)
